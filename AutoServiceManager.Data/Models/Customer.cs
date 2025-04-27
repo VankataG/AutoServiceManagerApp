@@ -4,15 +4,10 @@ namespace AutoServiceManager.Data.Models
 {
     public class Customer
     {
-        [Key]
         public Guid Id { get; set; }
 
-        [Required] 
-        [MaxLength(200)]
         public string Name { get; set; } = null!;
 
-        [Required]
-        [MaxLength(10)]
         public string Number { get; set; } = null!;
 
         public string? Email { get; set; }

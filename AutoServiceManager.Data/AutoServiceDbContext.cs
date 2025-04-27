@@ -1,5 +1,7 @@
-﻿using System.Data;
+﻿using System.Reflection;
+
 using AutoServiceManager.Data.Models;
+
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -29,12 +31,8 @@ namespace AutoServiceManager.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 
-            modelBuilder.Entity<RepairOrderPart>()
-                .HasKey(rp => new { rp.RepairOrderId, rp.PartId });
-
-            modelBuilder.Entity<RepairOrderEmployee>()
-                .HasKey(re => new { re.RepairOrderId, re.EmployeeId });
         }
     }
 }
