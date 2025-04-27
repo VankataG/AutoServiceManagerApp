@@ -10,26 +10,28 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">AutoServiceManager</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                    <partial name="_LoginPartial" />
-                </div>
-            </div>
-        </nav>
+	    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		    <a class="navbar-brand" href="/">AutoServiceManager</a>
+		    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+		            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+		    </button>
+
+		    <div class="collapse navbar-collapse" id="navbarNav">
+			    <ul class="navbar-nav">
+				    <li class="nav-item">
+					    <a class="nav-link" href="/Customers">Clients</a>
+				    </li>
+				    <li class="nav-item">
+					    <a class="nav-link" href="/Cars">Cars</a>
+				    </li>
+				    <li class="nav-item">
+					    <a class="nav-link" href="/RepairOrders">Repair Orders</a>
+				    </li>
+			    </ul>
+		    </div>
+	    </nav>
+
     </header>
     <div class="container">
         <main role="main" class="pb-3">
